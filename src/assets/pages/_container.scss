@@ -1,0 +1,56 @@
+.main-container {
+  z-index: 1;
+  min-height: 100vh;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $extreme-bg;
+    z-index: -1;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 5rem;
+    right: 5rem;
+    background: repeating-linear-gradient(to left, $primary-bg, $primary-bg 1px, transparent 1px, transparent 25%);
+    z-index: -1;
+    @include mobile {
+      left: 1.25rem;
+      right: 1.25rem;
+      background: repeating-linear-gradient(to left, $primary-bg, $primary-bg 1px, transparent 1px, transparent 49.9%)
+    }
+  }
+  &__line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 5rem;
+    right: 5rem;
+    background: linear-gradient(to right, $primary-bg, $primary-bg 1px, transparent 1px);
+    z-index: -1;
+    @include mobile {
+      display: none;
+    }
+  }
+  &__content {
+    margin: 0 5rem;
+    @include mobile {
+      margin: 0 1.25rem;
+    }
+  }
+  &__inner {
+    padding: 10rem 0 3rem;
+    @include mobile {
+      padding-top: 6.25rem;
+    }
+    &--is-hero {
+      padding-top: 2rem;
+    }
+  }
+}

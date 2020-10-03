@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: $primary-color;
+  &:hover {
+    text-decoration: none;
+    color: $primary-color;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

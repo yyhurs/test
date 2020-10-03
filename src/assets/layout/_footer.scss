@@ -1,0 +1,87 @@
+.footer {
+  padding: 2rem 4rem;
+  background: $primary-bg;
+  color: $dark;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  z-index: auto;
+  @include mobile {
+    padding: 2rem 1rem;
+  }
+  &__content {
+    padding-bottom: 2.5rem;
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+  &__logo {
+    width: 50%;
+    font-size: $fz-xl;
+    font-weight: 700;
+    padding-left: 0;
+    @include tablet {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+    @include mobile {
+      font-size: $fz-lg;
+    }
+  }
+  &__contact {
+    width: 25%;
+    @include tablet {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+  }
+  &__follow {
+    width: 25%;
+    &--isheader {
+      width: 100%;
+    }
+    @include tablet {
+      width: 100%;
+    }
+  }
+  &__icon {
+    color: $dark;
+    margin-right: 1rem;
+    @include laptop {
+      font-size: $fz-xs;
+    }
+  }
+  &__title {
+    font-size: 1.5rem;
+    color: $primary-color;
+  }
+  &__comment {
+    color: $secondary-color;
+    align-items: flex-end;
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+  &__copyright {
+    width: 50%;
+    @include tablet {
+      width: 100%;
+    }
+  }
+  &__declare {
+    width: 25%;
+    @include tablet {
+      width: 100%;
+    }
+    @include mobile {
+      display: none;
+    }
+  }
+  &__declare__link {
+    color: $secondary-color;
+    transition: .3s ease;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}

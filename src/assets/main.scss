@@ -1,0 +1,22 @@
+@import "@/assets/utils/variables";
+@import "@/assets/utils/mixins";
+@import "@/assets/utils/helpers";
+
+@import "@/assets/base/reset";
+@import "@/assets/vendors/bootstrap";
+@import "@/assets/base/font";
+@import "@/assets/base/typography";
+
+@import "@/assets/layout/flexbox";
+@import "@/assets/layout/header";
+@import "@/assets/layout/footer";
+
+@import "@/assets/pages/home";
+@import "@/assets/pages/products";
+@import "@/assets/pages/product";
+@import "@/assets/pages/carts";
+@import "@/assets/pages/container";
+
+@import "@/assets/components/counter";
+@import "@/assets/components/page";
+@import "@/assets/components/carousel";

@@ -1,0 +1,232 @@
+.carts {
+  $this: &;
+  &__error {
+    font-size: $fz-xl;
+  }
+  &__err-redirect:hover > #{$this}__err-btn {
+    text-decoration: underline;
+  }
+  &__list {
+    width: 100%;
+  }
+  &__item {
+    box-shadow: 5px 5px 10px darken($primary-bg, 10%);
+    background: $extreme-bg;
+    @include tablet {
+      padding: 1rem;
+    }
+  }
+  &__figure {
+    flex: 1;
+    flex-basis: 25%;
+    margin-bottom: 0;
+    @include mobile {
+      flex-basis: 50%;
+    }
+  }
+  &__img {
+    object-fit: contain;
+  }
+  &__figcaption {
+    flex: 3;
+    flex-basis: 75%;
+    @include mobile {
+      flex: 1;
+      flex-basis: 50%;
+    }
+  }
+  &__title {
+    font-size: $fz-xl;
+    @include laptop {
+      font-size: $fz-lg;
+    }
+    @include mobile {
+      font-size: $fz-sm;
+    }
+  }
+  &__details {
+    &--secondary {
+      align-items: flex-end;
+      @include mobile {
+        flex-direction: column;
+      }
+    }
+  }
+  &__counter {
+    max-width: calc(100% / 3 - 2rem);
+    @include mobile {
+      max-width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+  &__del-btn {
+    font-size: $fz-lg;
+    border: none;
+    outline: none;
+    padding: 0;
+    &:hover {
+      color: $primary-color;
+      background: transparent;
+    }
+    &:hover > #{$this}__del-icon--scale {
+      transform: translateY(28%) scale(2.5);
+      opacity: 0;
+      transition: all .3s ease;
+    }
+    &:focus {
+      outline: none;
+    }
+    @include mobile {
+      font-size: $fz-sm;
+    }
+  }
+  &__del-icon {
+    pointer-events: none;
+    &--scale {
+      top: 0;
+      left: 0;
+      transform: translateY(28%);
+    }
+  }
+  &__price {
+    font-size: $fz-md;
+    @include mobile {
+      font-size: $fz-sm;
+    }
+  }
+  &__secondary-block {
+    max-width: 50%;
+    margin-left: auto;
+    font-size: $fz-md;
+    @include tablet {
+      max-width: 100%;
+    }
+    @include mobile {
+      font-size: $fz-sm;
+    }
+  }
+  &__coupon__input {
+    flex: 8;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+  }
+  &__coupon__btn {
+    flex: 2;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  &__form__inner {
+    width: 100%;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-areas: 
+      "name email tel addr"
+      "comment comment comment comment"
+      ". . . submit";
+    @include tablet {
+      grid-gap: 1rem 2rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-areas: 
+        "name email"
+        "tel addr"
+        "comment comment"
+        ". submit";
+    }
+    @include mobile {
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-areas: 
+        "name"
+        "email"
+        "tel"
+        "addr"
+        "comment"
+        "submit";
+    }
+  }
+  &__form__block--name {
+    grid-area: name;
+  }
+  &__form__block--email {
+    grid-area: email;
+  }
+  &__form__block--tel {
+    grid-area: tel;
+  }
+  &__form__block--addr {
+    grid-area: addr;
+  }
+  &__form__block--comment {
+    grid-area: comment;
+  }
+  &__form__block--submit {
+    grid-area: submit;
+  }
+  &__form__label {
+    font-size: $fz-lg;
+    @include laptop {
+      font-size: $fz-md;
+    }
+  }
+  &__preview {
+    max-width: 25%;
+    font-size: $fz-lg;
+    @include laptop {
+      font-size: $fz-md;
+    }
+    @include tablet {
+      max-width: 50%;
+    }
+  }
+  &__preview__btn {
+    padding: .5rem 0;
+    color: $secondary-color;
+    &:hover {
+      color: $extreme-color;
+    }
+    @include tablet {
+      font-size: $fz-md;
+    }
+  }
+  &__order {
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+  &__order__block {
+    flex: 1;
+  }
+  &__order__customer {
+    flex: 1;
+  }
+  &__order__figure {
+    flex: 1;
+    margin: 0;
+  }
+  &__order__item {
+    font-size: $fz-lg;
+    @include laptop {
+      font-size: $fz-md;
+    }
+  }
+  &__order__item-title {
+    font-size: $fz-lg;
+    @include tablet {
+      font-size: $fz-md;
+    }
+  }
+  &__order__figcaption {
+    flex: 1;
+  }
+  &__order__item-coupon {
+    color: $secondary-color;
+  }
+  &__customer__text {
+    font-size: $fz-lg;
+    padding: .5rem 0;
+    @include tablet {
+      font-size: $fz-md;
+    }
+  }
+}

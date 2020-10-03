@@ -1,0 +1,148 @@
+.products {
+  $this: &;
+  @include mobile {
+    flex-direction: column;
+  }
+  &__nav {
+    width: 25%;
+    @include mobile {
+      width: calc(100% + 2.5rem);
+      background: $extreme-bg;
+      position: relative;
+      left: -1.25rem;
+      padding: 0 2.5rem;
+    }
+  }
+  &__nav-sticky {
+    position: sticky;
+    top: 2.5rem;
+    @include mobile {
+      margin: 0;
+    }
+  }
+  &__nav__item {
+    @include mobile {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        width: calc(100% + 4.5rem);
+        height: 1px;
+        background: $primary-bg;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+      }
+    }
+  }
+  &__nav__link {
+    display: block;
+    font-size: $fz-md * 1.2;
+    padding: .5rem 0;
+    color: $secondary-color;
+    &--active,
+    &:hover {
+      color: $extreme-color;
+    }
+    @include tablet {
+      font-size: $fz-md;
+    }
+  }
+  &__nav__search {
+    max-width: 100%;
+    border: none;
+    outline: none;
+    margin: .5rem 0;
+    padding: 0;
+    font: 400 $fz-md * 1.2 'Noto Sans TC';
+    &::placeholder {
+      color: $secondary-color;
+    }
+    @include tablet {
+      font-size: $fz-md;
+    }
+  }
+  &__selection {
+    width: 75%;
+    padding: 0 1.25rem;
+    @include mobile {
+      width: 100%;
+      margin-top: 1rem;
+    }
+  }
+  &__subtitle {
+    font-size: $fz-sm;
+    font-weight: 400;
+    top: 0;
+    vertical-align: super;
+  }
+  &__caption {
+    font-size: $fz-md;
+  }
+  &__caption__em {
+    color: $extreme-color;
+    font-weight: 700;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 3.75rem 2.5rem;
+    @include mobile {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  &__list__link {
+    display: block;
+    transition: .5s ease;
+    &:hover #{$this}__list__img {
+      transform: scale(1.1, 1.1);
+    }
+  }
+  &__list__figure {
+    overflow: hidden;
+    box-shadow: 5px 5px 10px darken($primary-bg, 10%);
+  }
+  &__list__img {
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    transition: transform .3s ease;
+  }
+  &__list__o-price {
+    text-decoration: line-through;
+    color: $secondary-color;
+  }
+  &__list__footer {
+    &--expand {
+      padding-top: 1.5rem;
+    }
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+  &__list__title {
+    @include laptop {
+      font-size: $fz-md;
+    }
+    @include mobile {
+      font-size: $fz-md;
+    }
+  }
+  &__list__price {
+    @include laptop {
+      font-size: $fz-md;
+    }
+    @include mobile {
+      font-size: $fz-md;
+    }
+  }
+  &__list__amount {
+    @include tablet {
+      display: none;
+    }
+    @include mobile {
+      display: block;
+    }
+  }
+}
