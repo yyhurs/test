@@ -63,19 +63,19 @@
         <div class="footer__follow footer__follow--isheader">
           <div class="footer__title l-gap-b-sm">Follow Us</div>
           <div class="footer__link l-flex-row l-flex-expand">
-            <a href="#" class="footer__icon">
+            <a href="https://github.com/yyhurs/IShouldGo" class="footer__icon">
               <font-awesome-icon :icon="['fab', 'instagram']" size="2x" />
             </a>
-            <a href="#" class="footer__icon">
+            <a href="https://github.com/yyhurs/IShouldGo" class="footer__icon">
               <font-awesome-icon :icon="['fab', 'facebook-f']" size="2x" />
             </a>
-            <a href="#" class="footer__icon">
+            <a href="https://github.com/yyhurs/IShouldGo" class="footer__icon">
               <font-awesome-icon :icon="['fab', 'twitter']" size="2x" />
             </a>
-            <a href="#" class="footer__icon">
+            <a href="https://github.com/yyhurs/IShouldGo" class="footer__icon">
               <font-awesome-icon :icon="['fab', 'youtube']" size="2x" />
             </a>
-            <a href="#" class="footer__icon">
+            <a href="https://github.com/yyhurs/IShouldGo" class="footer__icon">
               <font-awesome-icon :icon="['fab', 'github']" size="2x" />
             </a>
           </div>
@@ -138,7 +138,7 @@ export default {
       switch (vm.currentPage) {
         case 'Home':
           vm.invertHeader = true;
-          vm.currentTitle = '末日電商';
+          vm.currentTitle = '愛蔬購';
           break;
         case 'Products':
           vm.invertHeader = false;

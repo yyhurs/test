@@ -5,7 +5,11 @@
       :key="`carouselArr[${idx}]`"
       class="carousel__item l-gap-x-sm"
     >
-      <router-link class="carousel__link" :to="`/product/${item.id}`">
+      <router-link
+        class="carousel__link"
+        :to="`/product/${item.id}`"
+        v-if="item.id"
+      >
         <figure class="carousel__figure">
           <img class="carousel__img" :src="item.imageUrl" alt="" />
         </figure>
@@ -13,6 +17,17 @@
           <h3 class="carousel__title text-ellipsis">{{ item.title }}</h3>
         </figcaption>
       </router-link>
+      <div class="carousel__caption" @click="item.isShow = !item.isShow" v-else>
+        <h3 class="carousel__subtitle">
+          {{ item.title }}
+        </h3>
+        <p
+          class="carousel__details"
+          :class="{ 'carousel__details--active': item.isShow }"
+        >
+          {{ item.details }}
+        </p>
+      </div>
     </swiper-slide>
   </swiper>
 </template>
@@ -35,17 +50,20 @@ export default {
   },
   props: {
     carouselArr: Array,
+    isCaption: Boolean,
   },
   data() {
     return {
       swiperOption: {
         slidesPerView: 4,
-        loop: true,
-        autoplay: {
-          delay: 5000,
-          stopOnLastSlide: false,
-          disableOnInteraction: false,
-        },
+        loop: !this.isCaption,
+        autoplay: !this.isCaption
+          ? {
+              delay: 5000,
+              stopOnLastSlide: false,
+              disableOnInteraction: false,
+            }
+          : false,
         breakpoints: {
           768: {
             slidesPerView: 4,

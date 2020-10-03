@@ -16,4 +16,17 @@
     height: 100%;
     transition: transform .3s ease;
   }
+  &__caption {
+    cursor: pointer;
+  }
+  &__subtitle {
+    font-size: $fz-md;
+  }
+  &__details {
+    transition: opacity .5s;
+    opacity: 0;
+    &--active {
+      opacity: 1;
+    }
+  }
 }

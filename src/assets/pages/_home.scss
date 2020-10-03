@@ -30,6 +30,17 @@
     left: 0;
     z-index: -1;
     object-fit: cover;
+    &--img {
+      display: none;
+    }
+    @include mobile {
+      &--vid {
+        display: none;
+      }
+      &--img {
+        display: block;
+      }
+    }
   }
   &__info {
     align-items: flex-end;
@@ -42,11 +53,8 @@
     padding: 0 5rem 5rem 0;
     @include tablet {
       max-width: 100%;
-      padding-left: 6rem;
+      padding-left: 1rem;
       padding-right: 1rem;
-    }
-    @include tablet {
-      padding-left: 1.5rem;
     }
   }
   &__title {
@@ -108,8 +116,10 @@
 .home {
   $this: &;
   &__section {
-    @include mobile {
-      flex-direction: column;
+    &--flexbox {
+      @include mobile {
+        flex-direction: column;
+      }
     }
   }
   &__primary {
@@ -164,7 +174,56 @@
     height: 100%;
   }
   &__panel {
-    background: $extreme-bg;
-    border: 1px solid $primary-bg;
+    margin-right: 50%;
+    @include mobile {
+      margin-right: 0;
+    }
+  }
+  &__panel__text {
+    font-size: $fz-md;
+  }
+  &__gallery {
+    width: 100%;
+    display: grid;
+    grid-row-gap: 1rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-areas: 
+      "check check check check"
+      "grow grow trans trans"
+      "grow grow service service";
+    @include mobile {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      grid-template-areas: 
+      "check"
+      "grow"
+      "trans"
+      "service";
+    }
+  }
+  &__gallery__item {
+    &--check {
+      grid-area: check;
+    }
+    &--grow {
+      grid-area: grow;
+    }
+    &--trans {
+      grid-area: trans;
+    }
+    &--service {
+      grid-area: service;
+      align-self: end;
+    }
+  }
+  &__headline {
+    font-size: $fz-lg;
+    font-weight: 700;
+    margin-top: 5rem;
+    @include mobile {
+      margin-right: 50%;
+    }
+    &--first {
+      margin-top: 1rem;
+    }
   }
 }

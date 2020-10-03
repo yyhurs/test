@@ -26,7 +26,7 @@ const routes = [
         name: 'Home',
         component: Home,
         meta: {
-          title: 'Apocalyptic EC｜末日電商',
+          title: 'IShouldGo｜愛蔬購',
         },
       },
       {
