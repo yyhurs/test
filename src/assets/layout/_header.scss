@@ -148,6 +148,7 @@
     align-items: flex-start;
     @include mobile {
       width: 100%;
+      padding: 5rem 2rem 3rem 2rem;
     }
   }
   &__nav__link {

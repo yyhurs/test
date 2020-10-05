@@ -56,6 +56,9 @@
       padding-left: 1rem;
       padding-right: 1rem;
     }
+    @include mobile {
+      padding-bottom: 2rem;
+    }
   }
   &__title {
     margin: 0;
@@ -66,9 +69,6 @@
     letter-spacing: .8rem;
     @include laptop {
       font-size: $fz-lg;
-    }
-    @include mobile {
-      line-height: 2;
     }
   }
   &__subtitle {

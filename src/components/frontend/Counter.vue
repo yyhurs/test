@@ -3,7 +3,7 @@
     <button
       class="counter__decrement button"
       :class="{ 'button--lg': sizeLg, 'button--disabled': count === 1 }"
-      @click="passCounter(-1)"
+      @click="passCounter(-1, true)"
       :disabled="count === 1"
     >
       <font-awesome-icon :icon="['fas', 'minus']" size="xs" />
@@ -14,11 +14,12 @@
       type="text"
       :min="1"
       v-model.number="verifiedCounter"
+      @change="passCounter(count)"
     />
     <button
       class="counter__increment button"
       :class="{ 'button--lg': sizeLg }"
-      @click="passCounter(1)"
+      @click="passCounter(1, true)"
     >
       <font-awesome-icon :icon="['fas', 'plus']" size="xs" />
     </button>
@@ -44,9 +45,10 @@ export default {
     },
   },
   methods: {
-    passCounter(num = 1) {
+    passCounter(num = 1, isClick = false) {
       const vm = this;
-      vm.count += num;
+      if (isClick) vm.count += num;
+      else vm.count = num;
       if (vm.count < 1) vm.count = 1;
       if (vm.dataObj) vm.$emit('pass-counter', vm.count, vm.dataObj);
       else vm.$emit('pass-counter', vm.count);
