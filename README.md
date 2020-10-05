@@ -1,4 +1,4 @@
-# vcli3
+# IShouldGo
 
 ## Project setup
 ```
