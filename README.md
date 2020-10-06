@@ -15,8 +15,8 @@ GitHub Pages：https://yyhurs.github.io/i-should-go/
 * 使用 Vue CLI 3 建構的 SPA
 * 前台介面 SCSS + BEM 純手刻 RWD
 * 後台介面 Bootstrap 4 + SCSS
-* 使用 vue axios 介接 API
-* 使用 vue router 配置路由
+* 使用 vue-axios 介接 API
+* 使用 Vue Router 配置路由
 * 使用 Airbnb 的 ESLint 規範提升程式碼品質
 
 ## 使用套件
