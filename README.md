@@ -11,13 +11,15 @@ GitHub Pages：
 
 ## 使用套件
 * [vue-axios](https://www.npmjs.com/package/vue-axios)
-* vee-validate
-* vee-validate
-* vee-validate
+* [vue-router](https://www.npmjs.com/package/vue-router)
+* [vue-loading-overlay](https://www.npmjs.com/package/vue-loading-overlay)
+* [vue-awesome-swiper](https://www.npmjs.com/package/vue-awesome-swiper)
+* [vue-fontawesome](https://www.npmjs.com/package/vue-fontawesome)
+* [vee-validate](https://www.npmjs.com/package/vee-validate)
 
 ## 功能介紹
 * 前台
-⋅⋅⋅* 首頁
+  * 首頁
 
 * 後台
 
