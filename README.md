@@ -6,7 +6,7 @@ GitHub Pages：https://yyhurs.github.io/i-should-go/
 * 本網站為個人練習前端技術所模擬之電商網站，無任何商業用途。
 * 網站介面模仿 [VIGUIER](https://www.viguier.com/en)。
 * 文案取自[果物配](https://fruitpay.com.tw/)與[統一生機](https://www.organicshops.cc/)。
-* 商品內容多處取自[維基百科](https://zh.wikipedia.org/wiki/Wikipedia:%E9%A6%96%E9%A1%B5)與 [Google](https://www.google.com/?hl=zh_tw)
+* 商品內容多處取自[維基百科](https://zh.wikipedia.org/wiki/Wikipedia:%E9%A6%96%E9%A1%B5)與 [Google](https://www.google.com/?hl=zh_tw)。
 * 圖片取自 [Unsplash](https://unsplash.com/)。
 * 影片取自 [Pexels](https://www.pexels.com/zh-tw/videos/)。
 
@@ -17,6 +17,7 @@ GitHub Pages：https://yyhurs.github.io/i-should-go/
 * 後台介面 Bootstrap 4 + SCSS
 * 使用 vue-axios 介接 API
 * 使用 Vue Router 配置路由
+* 使用 VeeValidate 做表單驗證
 * 使用 Airbnb 的 ESLint 規範提升程式碼品質
 
 ## 使用套件
