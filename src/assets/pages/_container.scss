@@ -9,7 +9,7 @@
     left: 0;
     right: 0;
     background: $extreme-bg;
-    z-index: -1;
+    z-index: auto;
   }
   &::after {
     content: '';
@@ -19,7 +19,7 @@
     left: 5rem;
     right: 5rem;
     background: repeating-linear-gradient(to left, $primary-bg, $primary-bg 1px, transparent 1px, transparent 25%);
-    z-index: -1;
+    z-index: auto;
     @include mobile {
       left: 1.25rem;
       right: 1.25rem;
@@ -33,13 +33,15 @@
     left: 5rem;
     right: 5rem;
     background: linear-gradient(to right, $primary-bg, $primary-bg 1px, transparent 1px);
-    z-index: -1;
+    z-index: auto;
     @include mobile {
       display: none;
     }
   }
   &__content {
     margin: 0 5rem;
+    position: relative;
+    z-index: 1;
     @include mobile {
       margin: 0 1.25rem;
     }
