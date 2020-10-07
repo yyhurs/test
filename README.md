@@ -32,6 +32,7 @@ GitHub Pages：https://yyhurs.github.io/i-should-go/
 * 前台
   * 首頁
   * 商品列表
+    * 篩選商品 
   * 單一商品頁面
   * 購物車
 
