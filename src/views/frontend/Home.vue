@@ -113,7 +113,7 @@
                 <h4 class="home__subtitle">所有商品享九折優惠</h4>
               </figcaption>
             </div>
-            <div class="home__secondary l-gap-sm">
+            <div class="home__primary l-gap-sm">
               <figure class="home__figure">
                 <img class="home__img" :src="['./media/lovegan.jpg']" alt="" />
               </figure>

@@ -114,6 +114,8 @@
 }
 
 .home {
+  position: relative;
+  z-index: 1;
   $this: &;
   &__section {
     &--flexbox {
@@ -213,6 +215,9 @@
     &--service {
       grid-area: service;
       align-self: end;
+    }
+    &:hover #{$this}__img {
+      transform: scale(1.1);
     }
   }
   &__headline {
