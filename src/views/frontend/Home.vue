@@ -31,7 +31,7 @@
         </div>
       </div>
     </div>
-    <div class="main-container pos-rel">
+    <div class="main-container">
       <main class="main-container__content">
         <div
           class="main-container__inner"

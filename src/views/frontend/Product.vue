@@ -1,5 +1,5 @@
 <template>
-  <div class="main-container pos-rel">
+  <div class="main-container">
     <loading :active.sync="isLoading"></loading>
     <main class="main-container__content">
       <div class="main-container__inner">
